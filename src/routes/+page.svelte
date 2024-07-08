@@ -2,6 +2,8 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	const myVariable = import.meta.env.VITE_MY_VARIABLE;
+
 </script>
 
 <svelte:head>
@@ -22,6 +24,7 @@
 	</h1>
 
 	<h2>
+		hello <div>{myVariable}</div>
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
 
