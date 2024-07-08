@@ -2,7 +2,14 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import { consoleMyAppName } from '../utils';
+
 	const myVariable = import.meta.env.VITE_MY_VARIABLE;
+
+	function handleClick() {
+    consoleMyAppName();
+  }
+
 
 </script>
 
@@ -25,6 +32,8 @@
 
 	<h2>
 		hello <div>{myVariable}</div>
+		<button on:click={handleClick}>Console App Name</button>
+
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
 
